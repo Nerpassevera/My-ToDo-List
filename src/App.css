@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+
+.done {
+  text-decoration: line-through;
+  opacity: 50%;
+  background-color: #282c342d;
+}
