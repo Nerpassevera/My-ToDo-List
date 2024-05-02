@@ -80,7 +80,6 @@ function App() {
       <ToDoInputForm AddItem={AddItem} />
       <ul className="list-group ">
         {toDos.map((todo, index) => {
-          console.log('passing: ', todo.isCompleted);
           return (
             <ToDoItem
               key={index}
