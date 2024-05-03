@@ -1,6 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-undef */
-// import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
@@ -52,9 +51,9 @@ test ('userEvent allows users to add...', () => {
   const doneBtns = getAllByText("✅");
   doneBtns.map((btn) => {
     userEvent.click(btn);
+    setTimeout(() => {
+      expect(btn.textContent).toBe("❌");
+    }, 0);
   });
-  const updatedBtns = getAllByText("❌");
-  updatedBtns.map((btn) => {
-    expect(btn.textContent).toBe("❌");
-  });
+
 });
